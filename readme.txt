@@ -1,3 +1,2 @@
 Hello, Python
-
-123
+Hello, Linux
