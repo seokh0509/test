@@ -1,0 +1,84 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <table border=1>
+      <tr>
+        <td>
+          NO.  {{data[0]}}
+        </td>
+        <td>
+          작성자 : {{data[3]}}<br>
+          작성일자 : {{data[4]}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          제목 :
+        </td>
+        <td width=600>
+          {{data[1]}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          첨부파일
+        </td>
+        <td>
+          <a href = "/download/{{fdown}}"> {{filename}} </a>
+        </td>
+      </tr>
+      <tr height =400>
+        <td>
+          Content : 
+        </td>
+        <td>
+            {{data[2]}}
+        </td>
+      </tr>
+      <tr>
+        <td colspan = "2">
+          <a href="/board_mod/{{data[0]}}"><input type="button" value="수정"></a>
+          <a href="/board_del/{{data[0]}}"><input type="button" value="삭제"></a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan = "2">
+        <table border="1">
+          <tr>
+            <td>
+              댓글작성
+            </td> 
+            <td>
+            <form action="/comment/{{data[0]}}" method="post" id="comm">
+              <textarea rows=4 cols=70 name= "com"> </textarea>
+            </td>
+            <td>
+              <input type="submit" form="comm">
+              <input type="reset" form="comm">
+            </td>
+            </form>
+          </tr>
+          {%for i in com%}
+          <tr>
+            <td>
+              {{i[4]}}
+            </td>
+            <td>
+              {{i[3]}}
+            </td>
+            <td>
+              <a href="/modcom/{{i[0]}}"><input type="button" value="수정"></a>
+              <a href="/delcom/{{i[0]}}"><input type="button" value="삭제"></a>
+            </td>
+          </tr>
+          {%endfor%}
+        </table>
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>
+

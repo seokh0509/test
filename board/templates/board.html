@@ -1,0 +1,28 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <H3>Board List</H3>
+    <hr>
+    <a href="/board_add"><input type="button" value="글 작성"></a>
+    <table border=2>
+      <tr>
+        <th>NO.</th>
+        <th width="400" height="20">제목</th>
+        <th>작성자</th>
+        <th>작성일자</th>
+      </tr>
+      {% for i in data %}
+      <tr>
+        <td>{{i[0]}}</td>
+        <td><a href = /board_view/{{i[0]}}>{{i[1]}}</a></td>
+        <td>{{i[3]}}</td>
+        <td>{{i[4]}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+
+</html>
+

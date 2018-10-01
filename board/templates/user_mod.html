@@ -1,0 +1,37 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <a href ="/"> Personal Page... </a>
+    <hr>
+    <table border="1">
+      <tr>
+        <td>
+          회원 정보 수정
+        </td>
+        <td>
+          <b>{{data[0]}}</b>
+        </td>
+      </tr>
+      <form action="/user_mod" id="user_update" method="POST">
+        <tr>
+          <td> 변경할 패스워드 </td>
+          <td><input type="text" name="upw"</td>
+        </tr>
+        <tr>
+          <td> 변경할 이메일 </td>
+          <td> <input type="text" name="mail" value={{data[2]}}></td>
+        </tr>
+        <tr>
+          <td> 변경할 전화번호</td>
+          <td>  <input type="text" name="phone" value={{data[3]}}></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="수정" form="user_update"></td>
+        </tr>
+      </form>
+    </table>
+
+  </body>
+</html>

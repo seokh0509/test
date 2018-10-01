@@ -1,0 +1,29 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <table border=1>
+      <form action="/modcom/{{data[0][0]}}" id="mod_com" method="post">
+      <tr>
+        <td>
+          수정할 내용
+        </td>
+        <td>
+          <textarea rows="3" cols="80" name="modcom">{{data[3]}}</textarea>
+        </td>
+      </tr>
+      </form>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <input type="submit" form="mod_com">
+          <input type="reset" form="mod_com">
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>
+

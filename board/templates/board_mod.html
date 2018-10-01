@@ -1,0 +1,37 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <table border=1>
+      <form action="/board_mod/{{data[0]}}" id="board_mod" method="post">
+      <tr>
+        <td>
+          제 목
+        </td>
+        <td>
+          <textarea rows="1" cols="80" name="title">{{data[1]}}</textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          내 용
+        </td>
+        <td>  
+          <textarea rows="15" cols="80" name="cont" >{{data[2]}}</textarea>
+        </td>
+      </tr>
+      </form>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <input type="submit" form="board_mod">
+          <input type="reset" form="board_mod">
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>
+

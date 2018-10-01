@@ -1,0 +1,30 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <a href ="/"> Move to Main Page... </a>
+    <hr>
+    <table border="1">
+      <tr>
+        <td>
+          ID
+        </td>
+        <td>
+          <b>{{data[0]}}</b>
+        </td>
+      </tr>
+      <form action="/user_del" id="user_del" method="POST">
+        <tr>
+          <td> 패스워드 </td>
+          <td> <input type="text" name="upw"></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="확인" form="user_del"></td>
+        </tr>
+      </form>
+    </table>
+       회원 탈퇴를 원하시는 경우, 패스워드를 입력하고 확인 버튼을 눌러주십시오
+
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>
+      USER LIST
+    </title>
+  </head>
+  <body>
+    <H3>USER LIST</H3>
+    <hr>
+    <table border="2">
+      <tr>
+        <th> UID </th>
+        <th> UPW </th>
+        <th> Mail </th>
+        <th> Phone </th>
+      </tr>
+      {% for user in users %}
+      <tr>
+        <td>{{ user[0] }}</td>
+        <td>{{ user[1] }}</td>
+        <td>{{ user[2] }}</td>
+        <td>{{ user[3] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
+
